@@ -9,7 +9,7 @@ router.get('/', getAllProducts);
 router.get('/:id', getProductById);
 router.put('/:id',protect, updateProduct);
 router.delete('/:id',protect, deleteProduct);
-router.post('/:id/reviews', addProductReview);
+router.post('/:id/reviews', protect, addProductReview);
 router.get('/:id/reviews', getProductReview);
 
 module.exports = router;
