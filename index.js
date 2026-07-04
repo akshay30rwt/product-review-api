@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use('/auth', authRoutes);
-app.use('/events', productRoutes);
+app.use('/products', productRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
